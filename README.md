@@ -45,16 +45,31 @@ Backend Fitness Management Application built with Java & Spring Boot featuring J
 
 ## 🔗 API Endpoints
 
-| Method | Endpoint         | Description                |
-| ------ | ---------------- | -------------------------- |
-| POST   | `/auth/register` | Register new user          |
-| POST   | `/auth/login`    | User login                 |
-| GET    | `/users`         | Get all users              |
-| GET    | `/users/{id}`    | Get user by ID             |
-| PUT    | `/users/{id}`    | Update user details        |
-| DELETE | `/users/{id}`    | Delete user                |
-| POST   | `/workout`       | Add workout activity       |
-| GET    | `/workout`       | Get all workout activities |
+### 🔐 Authentication APIs
+
+| Method | Endpoint             | Description                       |
+| ------ | -------------------- | --------------------------------- |
+| POST   | `/api/auth/register` | Register a new user               |
+| POST   | `/api/auth/login`    | Login user and generate JWT token |
+
+---
+
+### 🏃 Activity APIs
+
+| Method | Endpoint                      | Description                       |
+| ------ | ----------------------------- | --------------------------------- |
+| POST   | `/api/activity`               | Track user activity               |
+| GET    | `/api/activity/user/{userId}` | Get activities of a specific user |
+
+---
+
+### 💡 Recommendation APIs
+
+| Method | Endpoint                                    | Description                        |
+| ------ | ------------------------------------------- | ---------------------------------- |
+| POST   | `/api/recommendation/generate`              | Generate fitness recommendation    |
+| GET    | `/api/recommendation/user/{userId}`         | Get recommendations by user ID     |
+| GET    | `/api/recommendation/activity/{activityId}` | Get recommendations by activity ID |
 
 ---
 
@@ -72,7 +87,6 @@ Backend Fitness Management Application built with Java & Spring Boot featuring J
    ```
 7. Test APIs using Postman or Swagger UI
 
----
 
 ## 📌 API Testing
 
